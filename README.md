@@ -40,7 +40,7 @@ The CSV log file was uploaded into Splunk Enterprise and assigned to the `splunk
 
 **Screenshot 1 — CSV Data Ingestion and Index Configuration**
 
-![CSV Data Ingestion and Index Configuration](screenshots/01-data-ingestion.png)
+![CSV Data Ingestion and Index Configuration](https://github.com/Shan-light/Splunk-SOC-investigation/blob/5e3fe47e4063cf994dfa98b46774988d0e871770/image/cvs%20data%20ingesting.png)
 
 *Shows the uploaded file's source type, file type, host, and assigned index.*
 
@@ -57,7 +57,7 @@ index=splunk_soc
 
 **Screenshot 2 — Verification of Total Ingested Events**
 
-![Verification of Total Ingested Events](screenshots/02-event-count.png)
+![Verification of Total Ingested Events](https://github.com/Shan-light/Splunk-SOC-investigation/blob/5e3fe47e4063cf994dfa98b46774988d0e871770/image/Verification%20Ingested%20Events%20.png)
 
 ### 2.3 Verify the Event Time Range
 
@@ -77,7 +77,7 @@ These timestamps establish the time range represented by the dataset's `timestam
 
 **Screenshot 3 — Verification of Earliest and Latest Event Timestamps**
 
-![Event Time Range](screenshots/03-event-time-range.png)
+![Event Time Range](https://github.com/Shan-light/Splunk-SOC-investigation/blob/5e3fe47e4063cf994dfa98b46774988d0e871770/image/Verify%20the%20event%20time%20range.png)
 
 ### 2.4 Verify the Source Type
 
@@ -92,7 +92,7 @@ index=splunk_soc
 
 **Screenshot 4 — Verification of Event Source Type**
 
-![Event Source Type](screenshots/04-source-type.png)
+![Event Source Type](https://github.com/Shan-light/Splunk-SOC-investigation/blob/5e3fe47e4063cf994dfa98b46774988d0e871770/image/Verify%20the%20source%20type.png)
 
 ### 2.5 Examine Host and User Fields
 
@@ -116,7 +116,7 @@ index=splunk_soc
 
 **Screenshot 5 — Host and User Field Analysis**
 
-![Host and User Field Analysis](screenshots/05-host-user-analysis.png)
+![Host and User Field Analysis](https://github.com/Shan-light/Splunk-SOC-investigation/blob/5e3fe47e4063cf994dfa98b46774988d0e871770/image/Host%20and%20User%20Field%20Analysis.png)
 
 ### 2.6 Review Important Event Fields
 
@@ -132,7 +132,7 @@ This search displayed the main fields required for the investigation, including 
 
 **Screenshot 6 — Review of Key Security Event Fields**
 
-![Key Security Event Fields](screenshots/06-key-fields.png)
+![Key Security Event Fields](https://github.com/Shan-light/Splunk-SOC-investigation/blob/5e3fe47e4063cf994dfa98b46774988d0e871770/image/Review%20of%20Key%20Security%20Event%20Fields.png)
 
 ---
 
@@ -154,7 +154,7 @@ This search grouped login events by status to establish a baseline of successful
 
 **Screenshot 7 — Login Activity Baseline by Authentication Status**
 
-![Login Activity Baseline](screenshots/07-login-baseline.png)
+![Login Activity Baseline](https://github.com/Shan-light/Splunk-SOC-investigation/blob/5e3fe47e4063cf994dfa98b46774988d0e871770/image/Login%20Activity%20Baseline.png)
 
 ### Step 2 — Identify Users with Failed Login Attempts
 
@@ -178,7 +178,7 @@ The `jsmith` account had the highest number of failed login attempts, making it 
 
 **Screenshot 8 — Failed Login Attempts by User**
 
-![Failed Logins by User](screenshots/08-failed-logins-by-user.png)
+![Failed Logins by User](https://github.com/Shan-light/Splunk-SOC-investigation/blob/5e3fe47e4063cf994dfa98b46774988d0e871770/image/Failed%20Login%20Attempts%20by%20User.png)
 
 ### Step 3 — Identify Suspicious Source IP Addresses
 
@@ -194,7 +194,7 @@ index=splunk_soc action=login status=failed
 
 **Screenshot 9 — Failed Login Attempts by Source IP**
 
-![Failed Logins by Source IP](screenshots/09-failed-logins-by-source-ip.png)
+![Failed Logins by Source IP](https://github.com/Shan-light/Splunk-SOC-investigation/blob/5e3fe47e4063cf994dfa98b46774988d0e871770/image/Failed%20Login%20Attempts%20by%20Source%20IP%20.png)
 
 ### Step 4 — Correlate the Suspicious User and Source IP
 
@@ -210,7 +210,7 @@ index=splunk_soc action=login status=failed
 
 **Screenshot 10 — Correlation of Failed Logins by User and Source IP**
 
-![User and IP Correlation](screenshots/10-user-ip-correlation.png)
+![User and IP Correlation](https://github.com/Shan-light/Splunk-SOC-investigation/blob/5e3fe47e4063cf994dfa98b46774988d0e871770/image/Failed%20and%20Successful%20Logins%20from%20the%20Suspicious%20IP%20.png)
 
 ### Step 5 — Examine Individual Failed Authentication Events
 
@@ -234,7 +234,7 @@ The repeated, rapid authentication failures against the same account are consist
 
 **Screenshot 11 — Detailed Review of Failed SSH Login Events**
 
-![Detailed Failed SSH Login Events](screenshots/11-failed-login-details.png)
+![Detailed Failed SSH Login Events](https://github.com/Shan-light/Splunk-SOC-investigation/blob/5e3fe47e4063cf994dfa98b46774988d0e871770/image/Detailed%20Review%20of%20Failed%20SSH%20Login%20Events.png)
 
 ### Step 6 — Investigate Activity from the Suspicious Source IP
 
@@ -260,7 +260,7 @@ In this context, the commands are consistent with possible post-login reconnaiss
 
 **Screenshot 12 — Suspicious IP Investigation and Post-Authentication Activity**
 
-![Suspicious IP Investigation](screenshots/12-suspicious-ip-investigation.png)
+![Suspicious IP Investigation](https://github.com/Shan-light/Splunk-SOC-investigation/blob/5e3fe47e4063cf994dfa98b46774988d0e871770/image/Investigate%20activity%20from%20the%20suspicious%20source%20IP.png)
 
 ### Step 7 — Confirm the Successful Authentication
 
@@ -276,7 +276,7 @@ index=splunk_soc src_ip="203.0.113.77" action=login
 
 **Screenshot 13 — Confirmation of Failed and Successful Logins**
 
-![Authentication Outcome](screenshots/13-authentication-confirmation.png)
+![Authentication Outcome](https://github.com/Shan-light/Splunk-SOC-investigation/blob/5e3fe47e4063cf994dfa98b46774988d0e871770/image/Failed%20and%20Successful%20Logins%20from%20the%20Suspicious%20IP%20.png)
 
 ---
 
