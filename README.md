@@ -210,7 +210,7 @@ index=splunk_soc action=login status=failed
 
 **Screenshot 10 — Correlation of Failed Logins by User and Source IP**
 
-![User and IP Correlation](https://github.com/Shan-light/Splunk-SOC-investigation/blob/5e3fe47e4063cf994dfa98b46774988d0e871770/image/Failed%20and%20Successful%20Logins%20from%20the%20Suspicious%20IP%20.png)
+![User and IP Correlation](https://github.com/Shan-light/Splunk-SOC-investigation/blob/d25d36a663c19d3ec14361879a1ba4789e13c4cd/image/Correlation%20of%20Failed%20Logins%20by%20User.png)
 
 ### Step 5 — Examine Individual Failed Authentication Events
 
